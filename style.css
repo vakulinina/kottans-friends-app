@@ -26,7 +26,7 @@ main {
   display: flex;
   align-content: stretch;
   width: 100%;
-  min-width: 460px;
+  min-width: 360px;
   max-width: 1200px;
   min-height: 100vh;
   margin: 0 auto 0;
@@ -107,8 +107,7 @@ button:hover {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  width: 20%;
-  min-width: 200px;
+  width: 200px;
   background-color: white;
   overflow: hidden;
   margin: 10px;
@@ -125,7 +124,7 @@ button:hover {
 
 .name {
   font-weight: bold;
-  height: 2em;
+  height: 2.2em;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -214,29 +213,55 @@ button:hover {
   width: 50px;
 }
 
+.search-field {
+  width: 100%;
+}
+
 .row-wrap {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  margin: 5px 0 5px;
+  margin: 3px 0 3px;
 }
 
 @media screen and (max-width: 730px) {
+  .users {
+    width: 100%;
+  }
+
+  .photo-wrap {
+    height: 150px;
+  }
+
   .filters-button {
     display: inline-block;
   }
 
   .filters {
-    transform: translate(280px);
     position: fixed;
     right: 0;
     top: 70px;
     height: 100%;
+    transform: translate(350px);
     transition: 0.3s;
   }
 
   .visible {
     transform: translate(0);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .filters {
+    width: 50%;
+    min-width: 160px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .user-card {
+    width: 46%;
+    margin: 2%;
   }
 }
