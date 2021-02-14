@@ -19,9 +19,10 @@ const getUsers = async () => {
     const json = await response.json();
     allUsers = json.results;
   } catch (error) {
-    document.querySelector('.error-notification').innerHTML = `
-      Sorry, couldn't get the data <br>
-      ${error}`
+    const errorNotification = document.createElement('p');
+    errorNotification.classList.add('error-notification')
+    errorNotification.innerHTML = `Sorry, couldn't get the data <br> ${error}`;
+    document.querySelector('main').prepend(errorNotification)
   }
   return allUsers
 }
