@@ -48,6 +48,7 @@ legend {
   float: left;
   width: 100%;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 label {
